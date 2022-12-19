@@ -11,7 +11,8 @@ class App extends React.Component {
         currentPlayer: null,
         board: [],
         gameOver: false,
-        write: ''
+        write: '',
+        l_color: ''
     }
 
     initBoard() {
@@ -26,7 +27,8 @@ class App extends React.Component {
             board,
             currentPlayer: this.state.player1,
             write: 'Red player turn',
-            gameOver: false
+            gameOver: false,
+            text_color: 'red'
         });
     }
 
@@ -56,12 +58,14 @@ class App extends React.Component {
             })
             if(this.state.currentPlayer === 1){
                 this.setState({
-                    write: "Red player wins!"
+                    write: "Red player wins!",
+                    text_color: 'red'
                 })
             }
             else {
                 this.setState({
-                    write: "Yellow player wins!"
+                    write: "Yellow player wins!",
+                    text_color: 'yellow'
                 })
             }
         }else {
@@ -76,7 +80,9 @@ class App extends React.Component {
             }
             if(count===7) {
                 this.setState({
-                    write: "it's draw"
+                    gameOver: true,
+                    write: "it's draw",
+                    text_color: 'black'
                 })
             }
         }
@@ -163,13 +169,15 @@ class App extends React.Component {
 
         if(this.state.currentPlayer === this.state.player1) {
             this.setState({
-                write: 'Yellow player turn'
+                write: 'Yellow player turn',
+                l_color: 'yellow'
             })
             return(this.state.player2)
         } else {
             this.setState({
                 currentPlayer: this.state.player1,
-                write: 'Red player turn'
+                write: 'Red player turn',
+                l_color: 'red'
             })
             return(this.state.player1)
         }
@@ -186,7 +194,7 @@ class App extends React.Component {
             <div className={"App"}>
                 <h1>Connect4</h1>
                 <hr/>
-                <h2><div className={"write"} >{this.state.write}</div></h2>
+                <h2><div className={"write"} style={{color: this.state.text_color}}>{this.state.write}</div></h2>
                 <div className={"tb"}>
                     <table>
                         {
