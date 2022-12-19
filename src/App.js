@@ -64,14 +64,20 @@ class App extends React.Component {
                     write: "Yellow player wins!"
                 })
             }
-        }
-        else {
-            if(!this.state.board.isEmpty){
-                this.setState(
-                    {
-                        write:"it's a draw"
-                    }
-                )
+        }else {
+            let count = 0
+            for (let i = 0; i < 7; i++) {
+                if(this.state.board[0][i] === null){
+                    break;
+                }
+                else {
+                    count = count + 1;
+                }
+            }
+            if(count===7) {
+                this.setState({
+                    write: "it's draw"
+                })
             }
         }
     }
