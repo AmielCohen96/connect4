@@ -1,25 +1,26 @@
-body {
-  font-family: 'Lucida Sans Unicode';
-}
-
-h1 {
+.App{
+  width: 435px;
   text-align: center;
-  font-size: 50px;
+  background-color:white;
+  cursor: pointer;
+  margin: auto;
 }
 
-table {
-  margin: 0 auto;
-  border-spacing: 0px 0px;
+
+.tb{
+  width: 435px;
+  text-align: center;
+  background-color: #1990ff;
+  margin: auto;
 }
 
 .button {
   background-color: #303030;
-  color: #50C8FF;
+  color: whitesmoke;
   height: 30px;
   width: 100px;
   border-radius: 5px;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  margin: auto;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -30,46 +31,18 @@ table {
 }
 
 .button:hover {
-  background-color: #50C8FF;
+  background-color: whitesmoke;
   color: #303030;
   transition: background-color 0.5s, color 0.5s;
 }
 
-.cell {
-  height: 70px;
-  width: 70px;
-  background-color: #1990ff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.message {
-  text-align: center;
-  font-size: 17px;
-}
-
-.white {
-  height: 60px;
+table td {
   width: 60px;
-  background-color: #FFF;
-  border-radius: 100px;
-}
-
-.red {
   height: 60px;
-  width: 60px;
-  background-color: red;
   border-radius: 100px;
+  border: 20px black;
+  background-color: white;
   transition: background-color 0.5s;
 }
 
-.yellow {
-  height: 60px;
-  width: 60px;
-  background-color: yellow;
-  border-radius: 100px;
-  transition: background-color 0.5s;
-}
+
