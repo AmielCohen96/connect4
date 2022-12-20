@@ -170,14 +170,14 @@ class App extends React.Component {
         if(this.state.currentPlayer === this.state.player1) {
             this.setState({
                 write: 'Yellow player turn',
-                l_color: 'yellow'
+                text_color: 'yellow'
             })
             return(this.state.player2)
         } else {
             this.setState({
                 currentPlayer: this.state.player1,
                 write: 'Red player turn',
-                l_color: 'red'
+                text_color: 'red'
             })
             return(this.state.player1)
         }
