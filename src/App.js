@@ -142,23 +142,19 @@ class App extends React.Component {
         }
     }
 
-
     checkDiagonalLeft(){
         let board = this.state.board
         let win = false
         for (let r = 3; r < 6 ; r++) {
             for (let p = 3; p < 7; p++) {
                 if (board[r][p]){
-                    if (board[r][p] === board[r-1][p+1] &&
-                        board[r][p] === board[r-2][p+2] &&
-                        board[r][p] === board[r-3][p+3]){
-                        if (board[r][p] === board[r-1][p-1] &&
-                            board[r][p] === board[r-2][p-2] &&
-                            board[r][p] === board[r-3][p-3]){
+                    if (board[r][p] === board[r-1][p-1] &&
+                        board[r][p] === board[r-2][p-2] &&
+                        board[r][p] === board[r-3][p-3]){
                             win = true
                             return win
-                        }
                     }
+
                 }
             }
         }
