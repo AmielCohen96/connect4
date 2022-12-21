@@ -2,14 +2,15 @@ import './App.css';
 
 
 function Cell(props){
-    let bg = 'white';
+    let backg = 'white';
     if (props.value === 1) {
-        bg = 'red';
+        backg = 'red';
     } else if (props.value === 2) {
-        bg = 'yellow';
+        backg = 'yellow';
+
     }
     return(
-        <td style = {{backgroundColor: bg}} onClick={() =>
+        <td style = {{backgroundColor: backg}} onClick={() =>
             props.cellClicked(props.row, props.cell)}>
 
         </td>
