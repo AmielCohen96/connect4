@@ -13,8 +13,7 @@ function Cell(props){
         <td style = {{backgroundColor: backg}} onClick={() =>
             props.cellClicked(props.row, props.cell)}>
 
-        </td>
-    )
+        </td>    )
 }
 
 export default Cell;
